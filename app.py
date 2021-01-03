@@ -8,7 +8,7 @@ from transformers import pipeline
 
 nlp_qa = pipeline('question-answering')
 
-def Bert_QA(question, answer_text):
+def Bert_QA(answer_text, question ):
     '''
     Takes a `question` string and an `answer` string and tries to identify 
     the words within the `answer` that can answer the question. Prints them out.
