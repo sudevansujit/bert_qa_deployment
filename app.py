@@ -4,7 +4,7 @@ from flask import Flask, render_template
 from flask import request
   
 
-nlp_qa = pipeline('question-answering')
+nlp_qa = pipeline('twmkn9/bert-base-uncased-squad2 Has a model card')
 
 def Bert_QA(answer_text, question ):
     '''
