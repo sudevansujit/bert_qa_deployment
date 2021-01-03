@@ -1,5 +1,3 @@
-from __future__ import print_function
-import numpy as np
 from transformers import pipeline
 import os
 from flask import Flask, render_template
@@ -26,11 +24,11 @@ def index():
     if request.method == 'POST':
       form = request.form
       result = []
-      bert_abstract = form['paragraph']
+      answer_text = form['paragraph']
       question = form['question']
-      result.append(form['question'])
-      result.append(Bert_QA(question, bert_abstract))
-      result.append(form['paragraph'])
+#       result.append(form['question'])
+      result.append(Bert_QA( answer_text, question ))
+#       result.append(form['paragraph'])
 
       return render_template("index.html",result = result)
 
