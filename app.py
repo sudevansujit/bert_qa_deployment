@@ -1,9 +1,10 @@
+from __future__ import print_function
+import numpy as np
+import ipywidgets as widgets
+from transformers import pipeline
 import os
 from flask import Flask, render_template
 from flask import request
-
-
-from transformers import pipeline
   
 
 nlp_qa = pipeline('question-answering')
